@@ -1,0 +1,7 @@
+
+RewriteEngine on
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP:X-Forwarded-SSL} !on
+RewriteCond %{HTTP_HOST} ^ceremonysolutions\.ca$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.ceremonysolutions\.ca$
+RewriteRule ^/?$ "https\:\/\/ceremonysolutions\.ca\/" [R=301,L]
